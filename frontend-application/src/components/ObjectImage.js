@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import {runQuery } from './helpers/runQuery';
 
 
-class ObjectDescription extends Component {
+class ObjectImage extends Component {
 
     state = {
         value: []
@@ -45,7 +45,7 @@ class ObjectDescription extends Component {
             <div> 
                 <ul>
                 {this.state.value.map((item, index)=>(
-                    <li key={index}>{item.title.value}</li>
+                     <img key={index + 1} alt='Hungry students prevented this from being loaded' src={item.img.value}/> 
                 ))}
                 </ul>
             </div>
@@ -53,4 +53,4 @@ class ObjectDescription extends Component {
     }
 }
 
-export default ObjectDescription;
+export default ObjectImage;
