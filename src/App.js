@@ -9,11 +9,16 @@ import './static/App.css';
 
 class App extends Component {
 
+  constructor(props){
+    super(props);
+    this.url = 'https://ramon96.github.io/frontend-applications/';
+  }
+
   render(){
 
     return (
       <div className='App'>
-      <Router>
+      <Router basename={this.url}>
         <Header />
         <Route exact path='/' component = { Home }></Route>
         <Route path='/doodle' component={ Doodle }></Route>
