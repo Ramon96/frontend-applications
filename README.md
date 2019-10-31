@@ -18,23 +18,23 @@ Finally you can run this project using.
 In order to deploy the project, simply run the  command `npm run deploy`
 
 # Features
-[x] Drawing on a canvas of given subject
-[x] usage of variety of colors
-[x] undo'ing and redo'ing
-[x] bucket tool
+- [x] Drawing on a canvas of given subject
+- [x] usage of variety of colors
+- [x] undo'ing and redo'ing
+- [x] bucket tool
 
 # Known Bugs 
  * Using the bucket tool too much will make it laggy
  
 # Upcomming features
-[] Style Interface buttons
-[] Ability to save your work
-[] stroke width
-[] getting random subjects
-[] providing the home page with featured work
-[] Showing recent and populair work on a gallery page
-[] Sharing work through social media
-[] Being able to print your work
+- [ ] Style Interface buttons
+- [ ] Ability to save your work
+- [ ] stroke width
+- [ ] getting random subjects
+- [ ] providing the home page with featured work
+- [ ] Showing recent and populair work on a gallery page
+- [ ] Sharing work through social media
+- [ ] Being able to print your work
 
 # Things I have learned during these 2 weeks
  * Usage of React Routing 
