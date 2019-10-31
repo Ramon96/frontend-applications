@@ -55,5 +55,9 @@ In order to deploy the project, simply run the  command `npm run deploy`
 I made use of the these sources to build this project.
 [React Crash course](https://www.youtube.com/watch?v=sBws8MSXN7A)
 
+# Credits
+ * Tomas Stolp (Helping me out with Sparql)
+ * Laurens Aarnoudse (His runQuery script set me in the right direction)
+
 # License
 [MIT @ Ramon Meijers](https://github.com/Ramon96/frontend-applications/blob/master/LICENSE)
