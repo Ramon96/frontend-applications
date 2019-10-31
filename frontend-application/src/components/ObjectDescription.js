@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {runQuery } from '../helpers/runQuery';
+import {runQuery } from './helpers/runQuery';
 
 
 class ObjectDescription extends Component {
