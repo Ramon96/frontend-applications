@@ -14,6 +14,11 @@ You want to install this projecs npm packages using.
 Finally you can run this project using.
 `npm start`
 
+# SCSS
+This project makes use of SCSS for the Styling. 
+You need to run a Watcher when you want to make some changes to the styles.
+This can be done with the VSCode Extention: [Live Sass Compiler](https://marketplace.visualstudio.com/items?itemName=ritwickdey.live-sass)
+
 # Deployment
 In order to deploy the project, simply run the  command `npm run deploy`
 
