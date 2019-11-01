@@ -58,7 +58,9 @@ In order to deploy the project, simply run the  command `npm run deploy`
  
  # Used package's
  [Canvas free drawing](https://www.federicomoretti.dev/canvas-free-drawing)
- R[eact-router-dom](https://www.npmjs.com/package/react-router-dom)
+ 
+ [React-router-dom](https://www.npmjs.com/package/react-router-dom)
+ 
  [GH-Pages](https://www.npmjs.com/package/gh-pages)
 
 # Sources
