@@ -6,10 +6,14 @@ import ObjectDescription from '../ObjectDescription';
 class doodle extends Component {
     render() {
         return (
-            <div>
+            <div className="col2">
                 <DrawingBoard/>
-                <ObjectDescription />
-                    <Link to='/done'>Klaar!</Link>
+                <div>
+                    <h2>Omschrijving</h2>
+                    <ObjectDescription />
+                    <div className="button">Ander Omschrijving</div>
+                    <div className="button"><Link to='/done'>Klaar!</Link></div>
+                </div> 
             </div>
         )
     }

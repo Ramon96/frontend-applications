@@ -79,10 +79,10 @@ class DrawingBoard extends Component {
                         tolerance: 50
                     });
             const isActive = this.cfd.toggleBucketTool();
-            document.getElementById('button').classList.add('active');
+            document.getElementById('bucket').classList.add('active');
             if (isActive) {
             } else {
-              document.getElementById('button').classList.remove('active');
+              document.getElementById('bucket').classList.remove('active');
             }
             break;
             case "clear":
@@ -96,26 +96,25 @@ class DrawingBoard extends Component {
     render() {
 
         return (
-            <div>
+            <div id='drawingboard'>
+                <h2>Het tekenbord</h2>
                 <canvas id="cfd"></canvas>
-                <button onClick={() => this.changeColor('white')}>Gum</button>
-                <button onClick={() => this.changeColor('black')}>Zwart</button>
-                <button onClick={() => this.changeColor('gray')}>Grijs</button>
-                <button onClick={() => this.changeColor('red')}>Rood</button>
-                <button onClick={() => this.changeColor('blue')}>Blauw</button>
-                <button onClick={() => this.changeColor('purple')}>Paars</button>
-                <button onClick={() => this.changeColor('green')}>Groen</button>
-                <button onClick={() => this.changeColor('brown')}>Bruin</button>
-                <button onClick={() => this.changeColor('orange')}>Oranje</button>
-                <button onClick={() => this.changeColor('yellow')}>Geel</button> 
-
-
-
-                <button id="button" onClick={() => this.actionButton('bucket')}>Emmer</button> 
-                <button onClick={() => this.actionButton('clear')}>Begin opnieuw</button> 
-                <button onClick={() => this.actionButton('undo')}>Stapje terug</button> 
-                <button onClick={() => this.actionButton('redo')}>Stapje vooruit</button> 
-
+                <div id="workbench">
+                    <button id="eraser" onClick={() => this.changeColor('white')}>Gum</button>
+                    <button id="black" onClick={() => this.changeColor('black')}></button>
+                    <button id ="gray" onClick={() => this.changeColor('gray')}></button>
+                    <button id="red" onClick={() => this.changeColor('red')}></button>
+                    <button id="blue" onClick={() => this.changeColor('blue')}></button>
+                    <button id="purple" onClick={() => this.changeColor('purple')}></button>
+                    <button id="green" onClick={() => this.changeColor('green')}></button>
+                    <button id="brown" onClick={() => this.changeColor('brown')}></button>
+                    <button id="orange" onClick={() => this.changeColor('orange')}></button>
+                    <button id="yellow" onClick={() => this.changeColor('yellow')}></button> 
+                    <button id="bucket" onClick={() => this.actionButton('bucket')}>Emmer</button> 
+                    <button id="restart" onClick={() => this.actionButton('clear')}>Begin opnieuw</button> 
+                    <button id="undo" onClick={() => this.actionButton('undo')}>Stapje terug</button> 
+                    <button id="redo" onClick={() => this.actionButton('redo')}>Stapje vooruit</button> 
+                </div>
 
             </div>
         )

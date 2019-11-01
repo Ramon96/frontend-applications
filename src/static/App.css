@@ -35,7 +35,113 @@ header nav a:hover {
   opacity: 0.6;
 }
 
+#uitgelicht {
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+
+#drawingboard #cfd {
+  display: block;
+  border: 2px solid black;
+  margin: auto;
+}
+
+#drawingboard button {
+  width: 40px;
+  height: 40px;
+  border: solid 2px black;
+  margin: 5px;
+}
+
+#drawingboard button#red {
+  background: red;
+}
+
+#drawingboard button#blue {
+  background: blue;
+}
+
+#drawingboard button#green {
+  background: lime;
+}
+
+#drawingboard button#purple {
+  background: magenta;
+}
+
+#drawingboard button#orange {
+  background: #f08c64;
+}
+
+#drawingboard button#gray {
+  background: #646464;
+}
+
+#drawingboard button#black {
+  background: black;
+}
+
+#drawingboard button#brown {
+  background: saddlebrown;
+}
+
+#drawingboard button#yellow {
+  background: yellow;
+}
+
+#drawingboard #workbench {
+  padding-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+  margin: auto;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
 html, body {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h2 {
+  text-align: center;
+}
+
+.button {
+  padding: 10px 15px;
+  background: #000;
+  color: #fff;
+  text-align: center;
+  -webkit-transition: .3s;
+  transition: .3s;
+  cursor: pointer;
+  display: inline-block;
+  margin: 20px;
+}
+
+.button a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.button:hover {
+  background: #333;
+}
+
+.col2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 /*# sourceMappingURL=App.css.map */

@@ -1,0 +1,50 @@
+
+#drawingboard{
+    #cfd{
+        display: block;
+        border: 2px solid black;
+        margin: auto;
+    }
+
+    button{
+        width: 40px;
+        height: 40px;
+        border: solid 2px black;
+        margin: 5px;
+        &#red{
+            background: rgb(255, 0, 0);
+        }
+        &#blue{
+            background: rgb(0, 0, 255);
+        }
+        &#green{
+            background: rgb(0, 255, 0);
+        }
+        &#purple{
+            background: rgb(255, 0, 255);
+        }
+        &#orange{
+            background: rgb(240, 140, 100);
+        }
+        &#gray{
+            background: rgb(100, 100, 100);
+        }
+        &#black{
+            background: rgb(0, 0, 0);
+        }
+        &#brown{
+            background: rgb(139, 69, 19);
+        }
+        &#yellow{
+            background: rgb(255, 255, 0);
+        }
+    }
+
+    #workbench{
+        padding-top: 20px;
+        display: flex;
+        width: 50%;
+        margin: auto;
+        flex-wrap: wrap;
+    }
+}

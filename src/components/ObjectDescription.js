@@ -43,11 +43,9 @@ class ObjectDescription extends Component {
     render(){
         return (
             <div> 
-                <ul>
                 {this.state.value.map((item, index)=>(
-                    <li key={index}>{item.title.value}</li>
+                    <p key={index}>{item.title.value}</p>
                 ))}
-                </ul>
             </div>
         )
     }

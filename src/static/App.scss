@@ -1,9 +1,45 @@
 @import 'helpers/housestyle';
 @import 'header';
+@import 'home';
+@import 'doodleboard';
 
 html, body{
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+h1{
+}
+
+h2{
+  text-align: center;
+}
+
+.button{
+  padding: 10px 15px;
+  background: #000;
+  color: #fff;
+  text-align: center;
+  transition: .3s;
+  cursor: pointer;
+  display: inline-block;
+  margin: 20px;
+  a{
+    color: #fff;
+    text-decoration: none;
+  }
+
+  &:hover{
+    background: #333;
+  } 
+}
+
+.col2{
+  display: flex;
+}
+
+.center{
+  display: flex;
+  justify-content: center;
+}
 
 
