@@ -55,6 +55,11 @@ In order to deploy the project, simply run the  command `npm run deploy`
  * The function of a class constructor (Why do I use the Super(props) all the time?)
  * Intergration of Back-end within a Front-end framework
  * Still don't really know how promises work, it just does...
+ 
+ # Used package's
+ [Canvas free drawing](https://www.federicomoretti.dev/canvas-free-drawing)
+ R[eact-router-dom](https://www.npmjs.com/package/react-router-dom)
+ [GH-Pages](https://www.npmjs.com/package/gh-pages)
 
 # Sources
 I made use of the these sources to build this project.
