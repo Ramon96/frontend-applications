@@ -44,7 +44,7 @@ In order to deploy the project, simply run the  command `npm run deploy`
  * The Pro's and Con's of React
  * How to deploy a React Project
  
-# Things I whised I had learned
+# Things I wish I had learned
  * Better grasp of Spaql
  * What Redux is all about
  * The function of a class constructor (Why do I use the Super(props) all the time?)
