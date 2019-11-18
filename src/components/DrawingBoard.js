@@ -12,7 +12,6 @@ class DrawingBoard extends Component {
 
     }
 
-
     componentDidMount(){
         this.cfd = new CanvasFreeDrawing({
             elementId: 'cfd',
