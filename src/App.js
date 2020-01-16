@@ -22,7 +22,7 @@ class App extends Component {
         <Header />
         <Route exact path='/' component = { Home }></Route>
         <Route path='/doodle' component={ Doodle }></Route>
-        <Route path='/done' component={ Done }></Route>
+        <Route path='/done' component={ Done }></Route> 
       </Router>
       </div>
       

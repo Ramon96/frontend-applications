@@ -13,3 +13,33 @@ $colors: (
     link: #333,
     light: #fff,
 );
+
+.imgButton{
+    border: solid 2px black;
+    border-radius: 15px;
+    display: block;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+    width: fit-content;
+    transition: .4s;
+    color: color(primary);
+    text-decoration: none;
+    font-size: 18px;
+    &:hover{
+        opacity: .4;
+    }
+    
+}
+
+.linkButton{
+    color: color(primary);
+    display: block;
+    margin: auto;
+    opacity: 0.4;
+    transition: .4s;
+    width: fit-content;
+    &:hover{
+        opacity: 1;
+    }
+}

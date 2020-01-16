@@ -4,10 +4,18 @@ header{
     background: #000;
     color: color(light);
     display: flex;
-    justify-content: space-between;
+    // justify-content: space-between;
+    justify-content: center;
+    padding: 8px 0;
     #header-logo{
       font-size: 40px;
       margin-left: 5px;
+      color: color(light);
+      text-decoration: none;
+      transition: .3s;
+        &:hover{
+          opacity: .4;
+        }
     }
     nav{
       display: block;

@@ -1,3 +1,40 @@
+.imgButton {
+  border: solid 2px black;
+  border-radius: 15px;
+  display: block;
+  margin: 20px auto;
+  padding: 20px;
+  text-align: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-transition: .4s;
+  transition: .4s;
+  color: #000;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.imgButton:hover {
+  opacity: .4;
+}
+
+.linkButton {
+  color: #000;
+  display: block;
+  margin: auto;
+  opacity: 0.4;
+  -webkit-transition: .4s;
+  transition: .4s;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.linkButton:hover {
+  opacity: 1;
+}
+
 header {
   width: 100%;
   background: #000;
@@ -5,14 +42,23 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 8px 0;
 }
 
 header #header-logo {
   font-size: 40px;
   margin-left: 5px;
+  color: #fff;
+  text-decoration: none;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+header #header-logo:hover {
+  opacity: .4;
 }
 
 header nav {

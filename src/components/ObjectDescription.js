@@ -18,34 +18,37 @@ class ObjectDescription extends Component {
         PREFIX edm: <http://www.europeana.eu/schemas/edm/>
         PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 
-        SELECT ?cho ?title ?typeLabel ?img WHERE {
+        SELECT (SAMPLE(?cho)as ?choSample) (SAMPLE(?title)as ?titleSample) ?description ?typeLabel ?img WHERE {
 
         <https://hdl.handle.net/20.500.11840/termmaster1397> skos:narrower* ?type .
         ?type skos:prefLabel ?typeLabel .
 
         ?cho edm:object ?type .
         ?cho dc:title ?title .
+  		?cho dc:description ?description .
         ?cho edm:isShownBy ?img.
         FILTER langMatches(lang(?title), "ned")
-        } LIMIT 1
+        } 
         `;
         runQuery(url, query)
         .then(json => {
-        
-        const result = json.results.bindings;
+            const result = json.results.bindings;
             console.log(result);
+
             this.setState({
                 value: result
             });
+
         });
     }
+
 
     render(){
         return (
             <div> 
-                {this.state.value.map((item, index)=>(
-                    <p key={index}>{item.title.value}</p>
-                ))}
+                {this.state.value.map((item, index)=>{
+                   return <p key={index}>{item.description.value.replace(/<\/?[^>]+(>|$)/g, " ")}</p>
+                })}
             </div>
         )
     }
