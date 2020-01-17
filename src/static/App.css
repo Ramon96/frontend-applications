@@ -16,6 +16,7 @@
 }
 
 .imgButton:hover {
+  cursor: pointer;
   opacity: .4;
 }
 
@@ -33,6 +34,21 @@
 
 .linkButton:hover {
   opacity: 1;
+}
+
+.subjectSelection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.subjectSelection h2 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 100%;
+          flex: 1 0 100%;
+  margin: 50px 0;
 }
 
 header {

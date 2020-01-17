@@ -27,6 +27,7 @@ $colors: (
     text-decoration: none;
     font-size: 18px;
     &:hover{
+        cursor: pointer;
         opacity: .4;
     }
     
@@ -41,5 +42,14 @@ $colors: (
     width: fit-content;
     &:hover{
         opacity: 1;
+    }
+}
+
+.subjectSelection{
+    display: flex;
+    flex-wrap: wrap;
+    h2{
+        flex: 1 0 100%;
+        margin: 50px 0;
     }
 }
