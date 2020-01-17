@@ -4,9 +4,13 @@ import {runQuery } from './helpers/runQuery';
 
 class ObjectDescription extends Component {
 
-    state = {
-        value: []
-      }  
+    constructor(props){
+        super(props);
+        
+        this.state = {
+            value: []
+          }  
+    }
 
     componentDidMount(){
         const url ="https://api.data.netwerkdigitaalerfgoed.nl/datasets/ivo/NMVW/services/NMVW-39/sparql"
@@ -38,17 +42,20 @@ class ObjectDescription extends Component {
             this.setState({
                 value: result
             });
-
+            this.props.descCeil(result.length)
+            this.props.changeDesc()
         });
     }
 
-
     render(){
+        const descriptions = this.state.value.map((item, index) => (
+            // The replace removes the html tags that are still present inside the descriptions.
+            <p key={index}>{item.description.value.replace(/<\/?[^>]+(>|$)/g, " ")}</p>
+        ))
+
         return (
             <div> 
-                {this.state.value.map((item, index)=>{
-                   return <p key={index}>{item.description.value.replace(/<\/?[^>]+(>|$)/g, " ")}</p>
-                })}
+                {descriptions[this.props.desc]}
             </div>
         )
     }
