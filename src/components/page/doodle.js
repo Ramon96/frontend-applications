@@ -8,7 +8,6 @@ import Food from '../../img/Voedsel.png';
 import Weapons from '../../img/Wapens.png';
 
 
-
 class doodle extends Component {
     constructor(props){
         super(props);
@@ -39,13 +38,12 @@ class doodle extends Component {
     }
 
     componentDidUpdate(){
-        console.log("descriptionValue " + this.state.descriptionValue)
+        //hallo 
     }
 
     changeDescription = () => {
         let randomValue = Math.round(Math.random() * (this.state.descriptionCeiling - 0) + 0);
         this.setState({descriptionValue: randomValue})
-        console.log("rand " + randomValue + "descV " + this.state.descriptionValue + "ceiling " + this.state.descriptionCeiling)
     }
     //This is necessary to calculate the new value, we dont want a description that doesn't exist, we can update the ceiling depending on the amount of descriptions we can fetch
     //With cealing I mean the maximum available number
@@ -58,19 +56,19 @@ class doodle extends Component {
            return (
             <div className="subjectSelection">
                 <h2>Kies een onderwerp</h2>
-                <div className="imgButton" id="Masks" onClick={this.handleClick('categoryButton')}>
+                <div className="imgButton" id="termmaster13440" onClick={this.handleClick('categoryButton')}>
                     <img src={Masks} alt="Maskers" />
                     <p>Maskers</p>
                 </div>
-                <div className="imgButton" id="Clothes" onClick={this.handleClick('categoryButton')}>
+                <div className="imgButton" id="termmaster13536" onClick={this.handleClick('categoryButton')}>
                     <img src={Clothes} alt="Kleding" />
                     <p>Kleding</p>
                 </div>
-                <div className="imgButton" id="Food" onClick={this.handleClick('categoryButton')}>
-                    <img src={Food} alt="Eten" />
-                    <p>Eten</p>
+                <div className="imgButton" id="termmaster1287" onClick={this.handleClick('categoryButton')}>
+                    <img src={Food} alt="Speelgoed" />
+                    <p>Speelgoed</p>
                 </div>
-                <div className="imgButton" id="Weapons" onClick={this.handleClick('categoryButton')}>
+                <div className="imgButton" id="termmaster12445" onClick={this.handleClick('categoryButton')}>
                     <img src={Weapons} alt="Wapens" />
                     <p>Wapens</p>
                 </div>
@@ -84,7 +82,7 @@ class doodle extends Component {
                 <DrawingBoard/> 
                  <div>
                     <h2>Omschrijving {this.state.termmaster}</h2>
-                    <ObjectDescription desc={this.state.descriptionValue} changeDesc={this.changeDescription} descCeil={this.setDescriptionCeiling} />
+                    <ObjectDescription desc={this.state.descriptionValue} changeDesc={this.changeDescription} descCeil={this.setDescriptionCeiling} term={this.state.termmaster} />
                     <div className="button" onClick={this.handleClick('reroll')}>Ander Omschrijving</div>
                     <div className="button"><Link to='/done'>Klaar!</Link></div>
                     <div className="button" id="back" onClick={this.handleClick("back")}>Terug</div>

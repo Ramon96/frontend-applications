@@ -24,7 +24,7 @@ class ObjectDescription extends Component {
 
         SELECT (SAMPLE(?cho)as ?choSample) (SAMPLE(?title)as ?titleSample) ?description ?typeLabel ?img WHERE {
 
-        <https://hdl.handle.net/20.500.11840/termmaster1397> skos:narrower* ?type .
+        <https://hdl.handle.net/20.500.11840/${this.props.term}> skos:narrower* ?type .
         ?type skos:prefLabel ?typeLabel .
 
         ?cho edm:object ?type .
@@ -33,6 +33,8 @@ class ObjectDescription extends Component {
         ?cho edm:isShownBy ?img.
         FILTER langMatches(lang(?title), "ned")
         } 
+
+        LIMIT 1000
         `;
         runQuery(url, query)
         .then(json => {
@@ -45,6 +47,8 @@ class ObjectDescription extends Component {
             this.props.descCeil(result.length)
             this.props.changeDesc()
         });
+
+        console.log(this.props.term)
     }
 
     render(){
