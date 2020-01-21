@@ -46,9 +46,11 @@ class ObjectDescription extends Component {
             });
             this.props.descCeil(result.length)
             this.props.changeDesc()
+
+            // this.props.img(result.img.)
         });
 
-        console.log(this.props.term)
+
     }
 
     render(){
@@ -57,11 +59,26 @@ class ObjectDescription extends Component {
             <p key={index}>{item.description.value.replace(/<\/?[^>]+(>|$)/g, " ")}</p>
         ))
 
-        return (
-            <div> 
-                {descriptions[this.props.desc]}
-            </div>
-        )
+        const img = this.state.value.map((item, index) => (
+            <img id="realImg" key={index + 1} src={item.img.value} alt={item.typeLabel.value} />
+        ))
+
+        if(this.props.state === "drawing"){
+            return (
+                <div> 
+
+                    {descriptions[this.props.desc]}
+                </div>
+            )
+        }
+        else{
+            return (
+                <div> 
+                    {img[this.props.desc]}
+                    {descriptions[this.props.desc]}
+                </div>
+            )
+        }
     }
 }
 

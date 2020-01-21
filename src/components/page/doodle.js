@@ -16,20 +16,39 @@ class doodle extends Component {
         this.state = {
             termmaster: "",
             descriptionValue: 0,
-            descriptionCeiling: 0
+            descriptionCeiling: 0,
+            state: "choosing"
         }
     }
 
     handleClick = param => e => {
         switch(param){
             case "categoryButton":
-                this.setState({termmaster: e.currentTarget.id})
+                this.setState({termmaster: e.currentTarget.id});
+                this.setState({state: "drawing"});
                 break;
             case "reroll":
                 this.changeDescription();
                 break;
             case "back":
                 this.setState({termmaster: ""});
+                this.setState({state: "choosing"});
+
+                break;
+            case "done":
+                this.setState({state: "done"});
+                break;
+            case "save":
+                console.log("ik vuur")
+                const canvas = document.getElementById('cfd');
+                window.open(canvas.toDataURL('image/png'));
+                var gh = canvas.toDataURL('png');
+            
+                var a  = document.createElement('a');
+                a.href = gh;
+                a.download = 'Tekening.png';
+            
+                a.click()
                 break;
             default:
                 this.setState({termmaster: ""});
@@ -37,9 +56,6 @@ class doodle extends Component {
         }
     }
 
-    componentDidUpdate(){
-        //hallo 
-    }
 
     changeDescription = () => {
         let randomValue = Math.round(Math.random() * (this.state.descriptionCeiling - 0) + 0);
@@ -51,8 +67,10 @@ class doodle extends Component {
         this.setState({descriptionCeiling: descCeil})
     }
 
+
+
     render() {
-        if(this.state.termmaster === ""){
+        if(this.state.state === "choosing"){
            return (
             <div className="subjectSelection">
                 <h2>Kies een onderwerp</h2>
@@ -75,20 +93,33 @@ class doodle extends Component {
             </div>
             )
         }
-        else {
+        else if(this.state.state === "drawing"){
         return (
-            
             <div className="col2">
                 <DrawingBoard/> 
-                 <div>
-                    <h2>Omschrijving {this.state.termmaster}</h2>
-                    <ObjectDescription desc={this.state.descriptionValue} changeDesc={this.changeDescription} descCeil={this.setDescriptionCeiling} term={this.state.termmaster} />
+                 <div className="descriptionSection">
+                    <h2>Over het object</h2>
+                    <ObjectDescription desc={this.state.descriptionValue} changeDesc={this.changeDescription} descCeil={this.setDescriptionCeiling} term={this.state.termmaster} state={this.state.state}/>
                     <div className="button" onClick={this.handleClick('reroll')}>Ander Omschrijving</div>
-                    <div className="button"><Link to='/done'>Klaar!</Link></div>
+                    <div className="button" onClick={this.handleClick('done')}>Klaar</div>
+                    {/* <div className="button"><Link to='/done'>Klaar!</Link></div> */}
                     <div className="button" id="back" onClick={this.handleClick("back")}>Terug</div>
                 </div> 
             </div>
         )
+        }
+        else {
+            return (
+                <div className="col2">
+                    <DrawingBoard/> 
+                     <div className="descriptionSection">
+                        <h2>Zo zag het eruit</h2>
+                        <ObjectDescription desc={this.state.descriptionValue} changeDesc={this.changeDescription} descCeil={this.setDescriptionCeiling} term={this.state.termmaster} state={this.state.state}/>
+                        <div className="button" id="back" onClick={this.handleClick("back")}>Begin opnieuw</div>
+                        <div className="button" id="save" onClick={this.handleClick("save")}>Download je tekening</div>
+                    </div> 
+                </div>
+            )
         }
     }
 }

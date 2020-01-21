@@ -51,6 +51,14 @@
   margin: 50px 0;
 }
 
+.descriptionSection {
+  max-width: 50%;
+}
+
+.descriptionSection img {
+  width: 400px;
+}
+
 header {
   width: 100%;
   background: #000;
@@ -161,6 +169,10 @@ header nav a:hover {
   margin: auto;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+#drawingboard #workbench #bucket.active {
+  border-color: #909090;
 }
 
 html, body {
