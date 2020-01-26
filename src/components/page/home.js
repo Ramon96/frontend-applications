@@ -10,7 +10,6 @@ class home extends Component {
                     <img src={startImage} alt="Begin met tekenen knop" />
                     <p>Begin lekker met tekenen</p>
                 </Link>
-                <Link to="/" className="linkButton">hoe werkt het?</Link>
             </div>
         )
     }
