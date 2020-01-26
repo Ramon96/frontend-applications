@@ -34,7 +34,7 @@ class ObjectDescription extends Component {
         FILTER langMatches(lang(?title), "ned")
         } 
 
-        LIMIT 1000
+
         `;
         runQuery(url, query)
         .then(json => {

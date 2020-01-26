@@ -1,5 +1,6 @@
 
 #drawingboard{
+
     #cfd{
         display: block;
         border: 2px solid black;
@@ -37,6 +38,12 @@
         }
         &#yellow{
             background: rgb(255, 255, 0);
+        }
+        img{
+            width: 25px;
+        }
+        &:hover{
+            cursor: pointer;
         }
     }
 

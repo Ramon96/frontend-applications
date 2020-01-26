@@ -30,6 +30,9 @@ $colors: (
         cursor: pointer;
         opacity: .4;
     }
+    img{
+        width: 260px;
+    }
     
 }
 
@@ -60,4 +63,8 @@ $colors: (
     img{
         width: 400px;
     }
+}
+
+.noClick{
+    pointer-events: none;
 }

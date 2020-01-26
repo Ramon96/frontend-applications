@@ -4,7 +4,7 @@ import DrawingBoard from '../DrawingBoard';
 import ObjectDescription from '../ObjectDescription';
 import Masks from '../../img/Maskers.png';
 import Clothes from '../../img/Kleding.png';
-import Food from '../../img/Voedsel.png';
+import Toys from '../../img/toys.png';
 import Weapons from '../../img/Wapens.png';
 
 
@@ -83,7 +83,7 @@ class doodle extends Component {
                     <p>Kleding</p>
                 </div>
                 <div className="imgButton" id="termmaster1287" onClick={this.handleClick('categoryButton')}>
-                    <img src={Food} alt="Speelgoed" />
+                    <img src={Toys} alt="Speelgoed" />
                     <p>Speelgoed</p>
                 </div>
                 <div className="imgButton" id="termmaster12445" onClick={this.handleClick('categoryButton')}>
@@ -96,13 +96,12 @@ class doodle extends Component {
         else if(this.state.state === "drawing"){
         return (
             <div className="col2">
-                <DrawingBoard/> 
+                <DrawingBoard state={this.state.state}/> 
                  <div className="descriptionSection">
                     <h2>Over het object</h2>
                     <ObjectDescription desc={this.state.descriptionValue} changeDesc={this.changeDescription} descCeil={this.setDescriptionCeiling} term={this.state.termmaster} state={this.state.state}/>
                     <div className="button" onClick={this.handleClick('reroll')}>Ander Omschrijving</div>
                     <div className="button" onClick={this.handleClick('done')}>Klaar</div>
-                    {/* <div className="button"><Link to='/done'>Klaar!</Link></div> */}
                     <div className="button" id="back" onClick={this.handleClick("back")}>Terug</div>
                 </div> 
             </div>
@@ -111,7 +110,7 @@ class doodle extends Component {
         else {
             return (
                 <div className="col2">
-                    <DrawingBoard/> 
+                    <DrawingBoard state={this.state.state}/> 
                      <div className="descriptionSection">
                         <h2>Zo zag het eruit</h2>
                         <ObjectDescription desc={this.state.descriptionValue} changeDesc={this.changeDescription} descCeil={this.setDescriptionCeiling} term={this.state.termmaster} state={this.state.state}/>
