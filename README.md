@@ -14,6 +14,9 @@ You want to install this projecs npm packages using.
 Finally you can run this project using.
 `npm start`
 
+You can find the application in your browser at
+`localhost:3000`
+
 # SCSS
 This project makes use of SCSS for the Styling. 
 You need to run a Watcher when you want to make some changes to the styles.
