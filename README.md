@@ -27,19 +27,16 @@ In order to deploy the project, simply run the  command `npm run deploy`
 - [x] usage of variety of colors
 - [x] undo'ing and redo'ing
 - [x] bucket tool
+- [x] Style Interface buttons
+- [x] Ability to Download your work
+- [x] getting random subjects
 
 # Known Bugs 
  * Using the bucket tool too much will make it laggy
+ * Live link has an issue's that the screen is empty; work around: click on the NMVW Logo should.
  
 # Upcomming features
-- [ ] Style Interface buttons
-- [ ] Ability to save your work
-- [ ] stroke width
-- [ ] getting random subjects
-- [ ] providing the home page with featured work
-- [ ] Showing recent and populair work on a gallery page
-- [ ] Sharing work through social media
-- [ ] Being able to print your work
+- [ ] Changing stroke width
 
 # Things I have learned during these 2 weeks
  * Usage of React Routing 
