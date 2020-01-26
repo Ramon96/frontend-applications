@@ -29,7 +29,7 @@ In order to deploy the project, simply run the  command `npm run deploy`
 - [x] bucket tool
 - [x] Style Interface buttons
 - [x] Ability to Download your work
-- [x] getting random subjects
+- [x] getting random descriptions within chosen subject
 
 # Known Bugs 
  * Using the bucket tool too much will make it laggy
